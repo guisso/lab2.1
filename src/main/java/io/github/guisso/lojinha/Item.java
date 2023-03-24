@@ -68,6 +68,10 @@ public class Item implements Serializable {
     }
     //</editor-fold>
 
+    public BigDecimal calcularTotal() {
+        return produto.getPreco().multiply(new BigDecimal(quantidade));
+    }
+    
     //<editor-fold defaultstate="collapsed" desc="hashCode/equals/toString">
     @Override
     public int hashCode() {
@@ -97,6 +101,7 @@ public class Item implements Serializable {
         return "Item{"
                 + "id=" + id
                 + ", quantidade=" + quantidade
+                + ", total=" + calcularTotal()
                 + ", preco=" + preco
                 + '}';
     }

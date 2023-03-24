@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -114,6 +115,7 @@ public class Cliente implements Serializable {
                 + ", cpf=" + cpf
                 + ", nome=" + nome
                 + ", nascimento=" + nascimento
+                + ", compras=" + compras
                 + '}';
     }
     //</editor-fold>

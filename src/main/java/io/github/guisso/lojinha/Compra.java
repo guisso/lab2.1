@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -101,7 +102,11 @@ public class Compra implements Serializable {
 
     @Override
     public String toString() {
-        return "Compra{" + "id=" + id + ", dataHora=" + dataHora + '}';
+        return "Compra{" 
+                + "id=" + id 
+                + ", dataHora=" + dataHora
+                + ", itens=" + itens
+                + '}';
     }
     //</editor-fold>
 
